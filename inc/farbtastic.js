@@ -241,13 +241,14 @@ jQuery._farbtastic = function (container, callback) {
       // Set background/foreground color
       $(fb.callback).css({
         backgroundColor: fb.color,
-        color: fb.hsl[2] > 0.5 ? '#000' : '#fff'
+        color: fb.hsl[2] > 0.4 ? '#000' : '#fff'
       });
 
       // Change linked value
       $(fb.callback).each(function() {
         if (this.value && this.value != fb.color) {
           this.value = fb.color;
+          $(container).trigger('colorChange', fb.color); // Custom event trigger
         }
       });
     }
