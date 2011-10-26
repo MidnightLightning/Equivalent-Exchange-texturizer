@@ -46,6 +46,7 @@ imagecopyresized($final,$trio, 0,0, 0,0, count($colors)*32,32, count($colors)*16
 header('Content-Type: image/png');
 imagepng($final);
 
-imagedestroy($mask);
+if ($mask) imagedestroy($mask);
+if ($base) imagedestroy($base);
 imagedestroy($trio);
 imagedestroy($final);
