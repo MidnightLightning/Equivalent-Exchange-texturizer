@@ -27,11 +27,13 @@
 		<tr><td>I keep my covalence dust in small jars</td><td><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="jar" /></td></tr>
 		<tr><td>I keep my covalence dust in larger cans</td><td><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="can" /></td></tr>
 	</table>
-	<table class="form" style="float:left; margin:0 0.5em;">
+	<table class="form" style="float:left; margin:0 0.5em; max-width:440px;">
 		<tr><th><label for="dust_low_color">Low Covalence Dust:</label></th><td><input type="text" class="color" name="dust_low_color" id="dust_low_color" value="#ff0000" /></td></tr>
-		<tr><th><label for="dust_med_color">Medium Covalence Dust:</label></th><td><input type="text" class="color" name="dust_med_color" id="dust_med_color" value="#ffff00" /></td></tr>
+		<tr><th style="white-space:nowrap;"><label for="dust_med_color">Medium Covalence Dust:</label></th><td><input type="text" class="color" name="dust_med_color" id="dust_med_color" value="#ffff00" /></td></tr>
 		<tr><th><label for="dust_hi_color">High Covalence Dust:</label></th><td><input type="text" class="color" name="dust_hi_color" id="dust_hi_color" value="#0000ff"/></td></tr>
-		<tr><td colspan="2" style="background-color:#888; padding:10px; text-align:center;"><img id="dust_preview_image" src="img/dust_preview.php?t=dust&amp;c=FF0000,FFFF00,0000FF" alt="" /></td></tr>		
+		<tr><td colspan="2" style="background-color:#888; padding:10px; text-align:center;"><img id="dust_preview_image" src="img/dust_preview.php?t=dust&amp;c=FF0000,FFFF00,0000FF" alt="" /></td></tr>
+		<tr><th>Stock color sets:</th><td style="font-size:80%;"><a href="#" onclick="set_dust_colors('#00ff00', '#00ffff', '#0000ff');">default</a>, <a href="#" onclick="set_dust_colors('#ff0000', '#ffff00', '#0000ff');">primary</a>, <a href="#" onclick="set_dust_colors('#ff9900', '#009900', '#660099');">secondary</a>, <a href="#" onclick="set_dust_colors('#cc0000', '#ff9900', '#ffff00');">warm</a>, <a href="#" onclick="set_dust_colors('#009900', '#0000ff', '#990099');">cool</a>,<br />
+			<a href="#" onclick="set_dust_colors('#990099', '#cccc00', '#008000');">mardi gras</a>, <a href="#" onclick="set_dust_colors('#ffff66', '#ff0000', '#0000ff');">ribbons</a>, <a href="#" onclick="set_dust_colors('#33aa00', '#ffff00', '#ff0000');">stoplight</a>, <a href="#" onclick="set_dust_colors('#cc6600', '#aaaaaa', '#ffcc33');">metals</a>, <a href="#" onclick="set_dust_colors('#6600aa', '#cc0000', '#ff9900');">sunset</a>, <a href="#" onclick="set_dust_colors('#cccccc', '#ff99aa', '#ff0000');">valentine</a></td></tr>
 	</table>
 	<p class="clear">&nbsp;</p>
 </div>
