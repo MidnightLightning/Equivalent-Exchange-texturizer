@@ -207,10 +207,5 @@ div#wrapper > div.content { padding:5px 20px; }
 table.form-list td { font-size:80%; padding:2px 5px; }
 table.form th { text-align:right; padding:2px 2px 2px 5px; }
 table.form td { padding:2px 5px; }
-
-
-
-
-
-
-
+input.color { border:2px solid transparent; }
+input.color.selected { border-color:#000; }

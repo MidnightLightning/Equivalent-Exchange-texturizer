@@ -10,6 +10,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="stylesheet" href="inc/style.css">
+	<link rel="stylesheet" href="inc/farbtastic.css">
 
 	<script src="js/libs/modernizr-2.0.min.js"></script>
 </head>
@@ -19,7 +20,7 @@
 	<h1>Covalence Dust</h1>
 	<div id="color_picker" style="float:left; width:195px; height:195px; background-color:#EEE; "></div>
 	<table class="form-list" style="float:left; margin:0 0.5em;">
-		<tr><td>My covalence dust is just loose dust</td><td><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="dust" /></td></tr>
+		<tr><td>My covalence dust is just loose dust</td><td><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="dust" checked="checked" /></td></tr>
 		<tr><td>My covalence dust is dense balls of covalence</td><td><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="ball" /></td></tr>
 		<tr><td>I keep my covalence dust in small vials</td><td><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="vial" /></td></tr>
 		<tr><td>I keep my covalence dust in larger vials</td><td><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="vial2" /></td></tr>
@@ -29,9 +30,9 @@
 		<tr><td>I keep my covalence dust in larger cans</td><td><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="can" /></td></tr>
 	</table>
 	<table class="form" style="float:left; margin:0 0.5em;">
-		<tr><th>Low Covalence Dust:</th><td><input type="text" class="color" name="dust_low_color" id="dust_low_color" /></td></tr>
-		<tr><th>Medium Covalence Dust:</th><td><input type="text" class="color" name="dust_med_color" id="dust_med_color" /></td></tr>
-		<tr><th>High Covalence Dust:</th><td><input type="text" class="color" name="dust_hi_color" id="dust_hi_color" /></td></tr>
+		<tr><th><label for="dust_low_color">Low Covalence Dust:</label></th><td><input type="text" class="color" name="dust_low_color" id="dust_low_color" value="#ff0000" /></td></tr>
+		<tr><th><label for="dust_med_color">Medium Covalence Dust:</label></th><td><input type="text" class="color" name="dust_med_color" id="dust_med_color" value="#ffff00" /></td></tr>
+		<tr><th><label for="dust_hi_color">High Covalence Dust:</label></th><td><input type="text" class="color" name="dust_hi_color" id="dust_hi_color" value="#0000ff"/></td></tr>
 		<tr><td colspan="2" style="background-color:#888; padding:10px; text-align:center;"><img src="dust_preview.php?c=FF0000,FFFF00,0000FF" alt="" /></td></tr>		
 	</table>
 	<p class="clear">&nbsp;</p>
@@ -40,6 +41,8 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="inc/jquery-1.6.2.min.js"><\/script>')</script>
+<script src="inc/farbtastic.js"></script>
+<script src="inc/main.js"></script>
 
 <!--[if lt IE 7 ]>
 	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
