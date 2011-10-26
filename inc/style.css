@@ -200,7 +200,13 @@ table { border-collapse: collapse; border-spacing: 0; }
    Primary styles
    Author: 
    ========================================================================== */
-
+body { background-color:#CCC; }
+div#wrapper { width:960px; margin:0 auto; background-color:#FFF; }
+div#wrapper > div.content { padding:5px 20px; }
+.clear { clear:both; height:1px; overflow:hidden; visibility:hidden; }
+table.form-list td { font-size:80%; padding:2px 5px; }
+table.form th { text-align:right; padding:2px 2px 2px 5px; }
+table.form td { padding:2px 5px; }
 
 
 
