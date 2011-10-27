@@ -37,6 +37,42 @@ $(document).ready(function() {
 	$('#color_picker').bind('colorChange', set_dust_preview_old); // Color has been updated; invalidate the preview image
 	$('input[name=dust_type]').change(update_dust_preview);
 	update_dust_preview(); // Start out updated
+	
+	// Glowstone texture uploader
+	$('#glow_upload').uploadify({
+		'uploader': 'inc/uploadify/uploadify.swf',
+		'script': 'inc/uploadify/uploadify-terrain.php',
+		'cancelImg': 'inc/uploadify/cancel.png',
+		'folder': 'img/tmp',
+		'fileExt': '*.png;*.zip',
+		'fileDesc': 'Minecraft Texture packs',
+		'auto': true,
+		'onComplete': function(e, id, fileObj, response, data) {
+			$('#glow_error').css('display', 'none'); // Hide any error message
+			if (response == 'false') {
+				// Upload failed
+				$('#glow_error').html("Blimey! That didn't work; are you sure you were uploading a texture pack...?").slideDown('fast');
+			} else {
+				// Try and grab the glowstone texture
+				$.get('inc/grab_glowstone.php', {file: response}, function(data) {
+					if (data == 'gonefile') {
+						$('#glow_error').html("Oh crickets... That didn't work; try uploading that again...?").slideDown('fast');
+					} else if (data == 'nopng') {
+						$('#glow_error').html("That terrain file doesn't seem to be a PNG file...").slideDown('fast');
+					} else if (data == 'notsquare') {
+						$('#glow_error').html("What sort of PNG are you giving me? That one's not even square!").slideDown('fast');
+					} else if (data == 'toosmall') {
+						$('#glow_error').html("That image is too small to be a terrain file...").slideDown('fast');
+					} else {
+						// Success! 'data' contains the path to the glowstone block texture
+						$('#glow_upload_container').html('Your glowstone block texture: <img src="'+data+'" style="vertical-align:-4px;" />');
+						$('#glowstone_block_image').val(data);
+					}
+				});
+			}
+			return true;
+		}
+	});
 });
 
 function set_dust_preview_old() {

@@ -9,6 +9,7 @@
 
 	<link rel="stylesheet" href="inc/style.css">
 	<link rel="stylesheet" href="inc/farbtastic.css">
+	<link rel="stylesheet" href="inc/uploadify/uploadify.css">
 
 	<script src="inc/modernizr-2.0.min.js"></script>
 </head>
@@ -37,11 +38,24 @@
 	</table>
 	<p class="clear">&nbsp;</p>
 </div>
+
+<div class="content">
+	<h1>Glowstone Aggregator</h1>
+	<p>The glowstone aggregator block uses a custom texture for the front and top, but uses your texture pack's glowstone block texture for the other sides and bottom. So what happens if you change from the default glowstone block appearance? <em>Oh Noes, they don't match!</em> Fix that here by merging your texture pack's glowstone block texture with the aggregator front and top elements.</p>
+	<input type="hidden" name="glowstone_block_image" id="glowstone_block_image" value="" />
+	<div id="glow_upload_container" style="text-align:center">
+		<div id="glow_error" style="display:none"></div>
+		<input id="glow_upload" name="glow_upload" type="file" />
+	</div>
+</div>
+	
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="inc/jquery-1.6.2.min.js"><\/script>')</script>
 <script src="inc/farbtastic.js"></script>
+<script src="inc/uploadify/swfobject.js"></script>
+<script src="inc/uploadify/jquery.uploadify.v2.1.4.min.js"></script>
 <script src="inc/main.js"></script>
 
 <!--[if lt IE 7 ]>
