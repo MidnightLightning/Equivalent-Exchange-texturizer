@@ -10,8 +10,8 @@ imagealphablending($sprite, false);
 imagesavealpha($sprite, true);
 
 foreach($types as $i => $type) {
-	$mask_file = 'types/'.$type.'_mask.png';
-	$base_file = 'types/'.$type.'_base.png';
+	$mask_file = 'dust_types/'.$type.'_mask.png';
+	$base_file = 'dust_types/'.$type.'_base.png';
 	if (!file_exists($mask_file) && !file_exists($base_file)) {
 		// Invalid type
 		$img = imagecreatetruecolor(200, 25);
@@ -37,7 +37,7 @@ foreach($types as $i => $type) {
 }
 
 header('Content-Type: image/png');
-imagepng($sprite);
+imagepng($sprite, null, 9);
 
 if ($mask) imagedestroy($mask);
 if ($base) imagedestroy($base);

@@ -209,5 +209,9 @@ table.form th { text-align:right; padding:2px 2px 2px 5px; }
 table.form td { padding:2px 5px; }
 input.color { border:2px solid transparent; width:5em; font-size:1.1em; text-align:center; font-family:monospace; font-weight:bold; }
 input.color.selected { border-color:#000; }
-span.dust_type_preview { display:block; width:16px; height:16px; background-image:url('../img/dust_type_sprite.png'); background-repeat:no-repeat; margin-bottom:2px; }
-div.uploadifyQueue { width:374px; margin:0 auto; }
+table.form-list td.preview { padding:0; }
+td.preview span { display:block; width:16px; height:16px; background-repeat:no-repeat; margin-bottom:2px; }
+span.dust_type_preview { background-image:url('../img/dust_type_sprite.png'); }
+span.collector_base_preview { background-image:url('../img/collector_base_sprite.png'); }
+span.collector_front_preview { background-image:url('../img/collector_front_sprite.png'); }
+span.collector_top_preview { background-image:url('../img/collector_top_sprite.png'); }

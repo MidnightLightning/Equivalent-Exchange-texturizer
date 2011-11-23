@@ -5,8 +5,8 @@ require_once('../inc/colored_item.php');
 
 $colors = explode(',', $_GET['c']);
 $type = (isset($_GET['t']) && $_GET['t'] != '')? $_GET['t'] : 'dust';
-$mask_file = 'types/'.$type.'_mask.png';
-$base_file = 'types/'.$type.'_base.png';
+$mask_file = 'dust_types/'.$type.'_mask.png';
+$base_file = 'dust_types/'.$type.'_base.png';
 if (!file_exists($mask_file) && !file_exists($base_file)) {
 	// Invalid type
 	$img = imagecreatetruecolor(200, 25);

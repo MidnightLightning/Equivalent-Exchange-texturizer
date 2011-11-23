@@ -19,14 +19,14 @@
 	<h1>Covalence Dust</h1>
 	<div id="color_picker" style="float:left; width:195px; height:195px; background-color:#EEE; "></div>
 	<table class="form-list" style="float:left; margin:0 0.5em;">
-		<tr><td>My covalence dust is just loose dust</td><td><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="dust" checked="checked" /></td></tr>
-		<tr><td>My covalence dust is dense balls of covalence</td><td><span class="dust_type_preview" style="background-position:0 -16px;"></span></td><td><input type="radio" name="dust_type" value="ball" /></td></tr>
-		<tr><td>I keep my covalence dust in small vials</td><td><span class="dust_type_preview" style="background-position:0 -32px;"></span></td><td><input type="radio" name="dust_type" value="vial" /></td></tr>
-		<tr><td>I keep my covalence dust in larger vials</td><td><span class="dust_type_preview" style="background-position:0 -48px;"></span></td><td><input type="radio" name="dust_type" value="vial2" /></td></tr>
-		<tr><td>I keep my covalence dust in paper packets</td><td><span class="dust_type_preview" style="background-position:0 -64px;"></span></td><td><input type="radio" name="dust_type" value="paper" /></td></tr>
-		<tr><td>I keep my covalence dust in wooden bowls</td><td><span class="dust_type_preview" style="background-position:0 -80px;"></span></td><td><input type="radio" name="dust_type" value="bowl" /></td></tr>
-		<tr><td>I keep my covalence dust in small jars</td><td><span class="dust_type_preview" style="background-position:0 -96px;"></span></td><td><input type="radio" name="dust_type" value="jar" /></td></tr>
-		<tr><td>I keep my covalence dust in larger cans</td><td><span class="dust_type_preview" style="background-position:0 -112px;"></span></td><td><input type="radio" name="dust_type" value="can" /></td></tr>
+		<tr><td>My covalence dust is just loose dust</td><td class="preview"><span class="dust_type_preview"></span></td><td><input type="radio" name="dust_type" value="dust" checked="checked" /></td></tr>
+		<tr><td>My covalence dust is dense balls of covalence</td><td class="preview"><span class="dust_type_preview" style="background-position:0 -16px;"></span></td><td><input type="radio" name="dust_type" value="ball" /></td></tr>
+		<tr><td>I keep my covalence dust in small vials</td><td class="preview"><span class="dust_type_preview" style="background-position:0 -32px;"></span></td><td><input type="radio" name="dust_type" value="vial" /></td></tr>
+		<tr><td>I keep my covalence dust in larger vials</td><td class="preview"><span class="dust_type_preview" style="background-position:0 -48px;"></span></td><td><input type="radio" name="dust_type" value="vial2" /></td></tr>
+		<tr><td>I keep my covalence dust in paper packets</td><td class="preview"><span class="dust_type_preview" style="background-position:0 -64px;"></span></td><td><input type="radio" name="dust_type" value="paper" /></td></tr>
+		<tr><td>I keep my covalence dust in wooden bowls</td><td class="preview"><span class="dust_type_preview" style="background-position:0 -80px;"></span></td><td><input type="radio" name="dust_type" value="bowl" /></td></tr>
+		<tr><td>I keep my covalence dust in small jars</td><td class="preview"><span class="dust_type_preview" style="background-position:0 -96px;"></span></td><td><input type="radio" name="dust_type" value="jar" /></td></tr>
+		<tr><td>I keep my covalence dust in larger cans</td><td class="preview"><span class="dust_type_preview" style="background-position:0 -112px;"></span></td><td><input type="radio" name="dust_type" value="can" /></td></tr>
 	</table>
 	<table class="form" style="float:left; margin:0 0.5em; max-width:440px;">
 		<tr><th><label for="dust_low_color">Low Covalence Dust:</label></th><td><input type="text" class="color" name="dust_low_color" id="dust_low_color" value="#ff0000" /></td></tr>
@@ -40,13 +40,39 @@
 </div>
 
 <div class="content">
-	<h1>Glowstone Aggregator</h1>
-	<p>The glowstone aggregator block uses a custom texture for the front and top, but uses your texture pack's glowstone block texture for the other sides and bottom. So what happens if you change from the default glowstone block appearance? <em>Oh Noes, they don't match!</em> Fix that here by merging your texture pack's glowstone block texture with the aggregator front and top elements.</p>
-	<input type="hidden" name="glowstone_block_image" id="glowstone_block_image" value="" />
-	<div id="glow_upload_container" style="text-align:center">
-		<div id="glow_error" style="display:none"></div>
-		<input id="glow_upload" name="glow_upload" type="file" />
-	</div>
+	<h1>Energy Collector</h1>
+	<p>The energy collector block is designed to look like a furnace, made out of a glowstone block. But what if you replace your default glowstone block texture or furnace type? <em>Oh noes, they don't match!</em> Fix that here by picking a glowstone style and furnace style for the energy collector block. You can also customize the top to indicate just how that energy collector is gathering that mystical photon energy.</p>
+	<table class="form-list" style="float:left; margin:0 0.5em;">
+		<tr><td>My collector is made from the default glowstone texture</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -48px;"></span></td><td><input type="radio" name="collector_base" value="default" checked="checked" /></td></tr>
+		<tr><td>My collector is made from raw glowstone chunks</td><td class="preview"><span class="collector_base_preview"></span></td><td><input type="radio" name="collector_base" value="chunks-raw" /></td></tr>
+		<tr><td>My collector is made from rocky glowstone chunks</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -16px;"></span></td><td><input type="radio" name="collector_base" value="chunks-rocky" /></td></tr>
+		<tr><td>My collector is made from shale-like glowstone chunks</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -32px;"></span></td><td><input type="radio" name="collector_base" value="chunks-shale" /></td></tr>
+		<tr><td>My collector is made from neon panels</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -64px;"></span></td><td><input type="radio" name="collector_base" value="panel-neon" /></td></tr>
+		<tr><td>My collector is made from glowing panels (Core25-style)</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -80px;"></span></td><td><input type="radio" name="collector_base" value="panel_core25" /></td></tr>
+		<tr><td>My collector is made from decaying panels</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -96px;"></span></td><td><input type="radio" name="collector_base" value="panels-decayed" /></td></tr>
+		<tr><td>My collector is made from glassy panels</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -112px;"></span></td><td><input type="radio" name="collector_base" value="panels-glassy" /></td></tr>
+		<tr><td>My collector is made from ornate panels</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -128px;"></span></td><td><input type="radio" name="collector_base" value="panels-ornate" /></td></tr>
+		<tr><td>My collector is made from plain panels</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -144px;"></span></td><td><input type="radio" name="collector_base" value="panels" /></td></tr>
+		<tr><td>My collector is made from glowstone embedded in dark stone</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -160px;"></span></td><td><input type="radio" name="collector_base" value="stone-dark" /></td></tr>
+		<tr><td>My collector is made from glowstone embedded in light stone</td><td class="preview"><span class="collector_base_preview" style="background-position:0 -176px;"></span></td><td><input type="radio" name="collector_base" value="stone-light" /></td></tr>
+	</table>
+	<table class="form-list" style="float:left; margin:0 0.5;">
+		<tr><td>My collector has the default collector front</td><td class="preview"><span class="collector_front_preview"></span></td><td><input type="radio" name="collector_front" value="default" checked="checked" /></td></tr>
+		<tr><td>My collector has a large, arched opening</td><td class="preview"><span class="collector_front_preview" style="background-position:0 -16px;"></span></td><td><input type="radio" name="collector_front" value="forge_arched" /></td></tr>
+		<tr><td>My collector has two openings, top and bottom</td><td class="preview"><span class="collector_front_preview" style="background-position:0 -32px;"></span></td><td><input type="radio" name="collector_front" value="forge_two" /></td></tr>
+		<tr><td>My collector innards are large gears</td><td class="preview"><span class="collector_front_preview" style="background-position:0 -48px;"></span></td><td><input type="radio" name="collector_front" value="gearbox-large" /></td></tr>
+		<tr><td>My collector innards are small gears</td><td class="preview"><span class="collector_front_preview" style="background-position:0 -64px;"></span></td><td><input type="radio" name="collector_front" value="gearbox-small" /></td></tr>
+		<tr><td>My collector "git"s high voltage photons</td><td class="preview"><span class="collector_front_preview" style="background-position:0 -80px;"></span></td><td><input type="radio" name="collector_front" value="git" /></td></tr>
+		<tr><td>My collector is simply a Mobius Fuel factory</td><td class="preview"><span class="collector_front_preview" style="background-position:0 -96px;"></span></td><td><input type="radio" name="collector_front" value="mobius" /></td></tr>
+		<tr><td>My collector warns of high voltage inside!</td><td class="preview"><span class="collector_front_preview" style="background-position:0 -112px;"></span></td><td><input type="radio" name="collector_front" value="voltage" /></td></tr>
+	</table>
+	<table class="form-list" style="float:left; margin:0 0.5;">
+		<tr><td>My collector has the default collector top</td><td class="preview"><span class="collector_top_preview"></span></td><td><input type="radio" name="collector_top" value="default" checked="checked" /></td></tr>
+		<tr><td>My collector has a high-tech solar panel</td><td class="preview"><span class="collector_top_preview" style="background-position:0 -16px;"></span></td><td><input type="radio" name="collector_top" value="panel" /></td></tr>
+		<tr><td>My collector has a simple photocell on top</td><td class="preview"><span class="collector_top_preview" style="background-position:0 -32px;"></span></td><td><input type="radio" name="collector_top" value="photocell" /></td></tr>
+	</table>
+	<p class="clear">&nbsp;</p>
+	<div style="background-color:#888; padding:10px; text-align:center;"><img id="collector_preview_image" src="img/collector_preview.php" alt="" /></div>
 </div>
 	
 </div>
